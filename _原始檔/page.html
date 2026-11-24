@@ -1,0 +1,175 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=432"><title>語錄卡落地頁 v5</title><style>
+@font-face{font-family:Cream;src:url("fonts_cream.otf")}
+:root{--paper:#F7F4ED;--ink:#3A2621;--text:#5E4A44;--mocha:#5C3F39;--rose:#A07A70;--wine:#7A2136;--blush:#EBCFC3;--line:#E3D8CC;--gold:#F1D48C;--card:#FFFDF9}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:432px;font-family:Cream,serif;color:var(--ink);-webkit-font-smoothing:antialiased;background:var(--paper)}
+b,strong,h2,h3{font-weight:normal}
+section{position:relative;overflow:hidden;background-color:var(--paper);background-image:radial-gradient(rgba(160,122,112,.07) .8px,transparent .9px);background-size:7px 7px;padding:36px 22px 40px}
+.en{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:500;letter-spacing:.2em}
+mark{color:inherit;background:linear-gradient(transparent 60%,rgba(201,140,128,.34) 60%);padding:0 1px}
+.eb{font-size:15px;color:var(--wine);letter-spacing:.14em;text-align:center}
+h2{font-size:28px;line-height:1.42;text-align:center;margin-top:8px;letter-spacing:.05em}
+h2 .u{background:linear-gradient(transparent 62%,rgba(201,140,128,.34) 62%)}
+.lead{font-size:14.5px;line-height:1.8;text-align:center;margin-top:12px;color:var(--text);letter-spacing:.04em}
+.ring{position:relative;margin:0 auto}.ring svg{position:absolute;inset:0}
+.rt{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;line-height:1.28;text-align:center;color:var(--ink);letter-spacing:.04em}
+/* 圓角卡片 panel */
+.pn{position:relative;background:var(--card);border-radius:18px;padding:8px;box-shadow:0 8px 22px rgba(58,38,33,.13),0 0 0 1px rgba(160,122,112,.14)}
+.pic{position:relative;background-size:cover;background-position:center;overflow:hidden;border-radius:12px}
+.tag{position:absolute;left:-10px;top:-18px;z-index:6;background:var(--mocha);color:#FBF6EF;border-radius:10px;padding:5px 16px 7px 16px;font-size:22px;transform:rotate(-3deg);box-shadow:0 4px 10px rgba(58,38,33,.22);letter-spacing:.06em}
+.tag:after{content:"";position:absolute;inset:3px;border-radius:7px;border:1px solid rgba(235,207,195,.45);pointer-events:none}
+.tag small{font-size:10.5px;color:var(--blush);margin-right:8px;vertical-align:4px;letter-spacing:.14em}
+.say{position:absolute;background:var(--card);border:1.3px solid var(--ink);border-radius:18px;padding:9px 15px 10px;font-size:18px;line-height:1.45;z-index:4;white-space:nowrap;letter-spacing:.03em;box-shadow:0 3px 10px rgba(40,25,20,.12)}
+.say:after{content:"";position:absolute;width:15px;height:15px;background:var(--card);border-right:1.3px solid var(--ink);border-bottom:1.3px solid var(--ink)}
+.say.dn:after{bottom:-8.5px;transform:rotate(45deg)}
+.say.up:after{top:-8.5px;transform:rotate(-135deg)}
+.card{position:absolute;width:150px;z-index:3}
+.card img{display:block;width:100%;filter:drop-shadow(0 6px 10px rgba(0,0,0,.32))}
+.stk{position:absolute;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:4;box-shadow:0 0 0 3px #fff,0 4px 10px rgba(0,0,0,.2)}
+.nar{background:var(--mocha);color:#FBF6EF;border-radius:0 0 12px 12px;margin-top:-1px;padding:12px 16px 13px;font-size:15px;line-height:1.6;letter-spacing:.04em;white-space:nowrap}
+.nar mark{background:none;color:var(--blush);padding:0}
+/* s03 */
+#s03 .ring{margin-top:16px}
+#s03 .pn{margin-top:38px}
+#s03 .pic{height:438px;border-radius:12px 12px 0 0}
+/* s03b */
+#s03b{padding:8px 22px 34px}
+.xm{position:relative;overflow:hidden;background:#B5423A;border-radius:12px;box-shadow:0 8px 20px rgba(80,30,20,.2);padding:20px 12px 22px;text-align:center;color:#fff;outline:2px solid #E2BE6E;outline-offset:-9px}
+.xm .sm{font-size:10px;letter-spacing:.32em;color:#F3D99B}
+.xm .big{font-size:34px;letter-spacing:.14em;margin-top:5px;background:linear-gradient(180deg,#FFF6DA 10%,#F1CF7E 55%,#D9A94A 90%);-webkit-background-clip:text;color:transparent}
+.xm .sh{position:absolute;top:-30%;bottom:-30%;width:90px;left:-40%;transform:skewX(-22deg);background:linear-gradient(90deg,transparent,rgba(255,236,180,.6),transparent);animation:sweep 2.5s linear infinite}
+.xm .sp{position:absolute;width:14px;height:14px;margin:-7px;opacity:0;background:radial-gradient(circle,#FFF4C8 0 18%,transparent 20%),linear-gradient(0deg,transparent 45%,#FFE7A0 45% 55%,transparent 55%),linear-gradient(90deg,transparent 45%,#FFE7A0 45% 55%,transparent 55%);animation:tw 2.5s linear infinite}
+@keyframes sweep{0%{left:-40%}55%{left:120%}100%{left:120%}}
+@keyframes tw{0%,100%{opacity:0;transform:scale(.4)}12%{opacity:1;transform:scale(1.15) rotate(20deg)}26%{opacity:0;transform:scale(.4)}}
+/* s04 */
+#s04{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:8px 22px 40px}
+#s04>div{background:var(--card);border-radius:14px;box-shadow:0 5px 14px rgba(58,38,33,.1),0 0 0 1px rgba(160,122,112,.14);text-align:center;padding:16px 4px 14px}
+#s04>div:nth-child(2){background:var(--mocha);color:#FBF6EF}
+#s04 .n{font-size:40px;line-height:1;color:var(--wine)}
+#s04>div:nth-child(2) .n{color:var(--blush)}
+#s04 .n small{font-size:20px;margin-left:2px}
+#s04 .c{font-size:13.5px;margin-top:8px;line-height:1.45;color:var(--text)}
+#s04>div:nth-child(2) .c{color:#EFE4DC}
+/* s05 wall */
+#s05 .pn{margin-top:26px;padding:0;background:var(--ink);height:500px;overflow:hidden}
+.wall img{position:absolute;width:104px;filter:drop-shadow(0 3px 6px rgba(0,0,0,.45))}
+#s05 .ring{position:absolute;right:-14px;top:-30px;margin:0;z-index:6}
+/* how */
+.how .hd{text-align:center}
+.how .no{display:inline-block;background:var(--card);border:1.2px solid var(--wine);color:var(--wine);border-radius:20px;padding:5px 14px 5px 17px;font-size:11px}
+.how h3{font-size:26px;line-height:1.42;margin-top:14px;letter-spacing:.05em}
+.how p.d{font-size:14.5px;line-height:1.8;color:var(--text);margin-top:10px;letter-spacing:.04em}
+.how .pn{margin-top:24px}
+.how .ph{height:462px;background-size:cover;background-position:center;border-radius:12px 12px 0 0}
+.how .bar{display:flex;align-items:center;gap:10px;background:var(--mocha);color:#fff;padding:11px 14px;border-radius:0 0 12px 12px}
+.how .bar .st{color:var(--blush);font-size:11.5px}
+.how .bar .cn{font-size:16px;flex:1;letter-spacing:.06em}
+.how .bar .ee{font-size:10px;color:#CDB8AF}
+.how .sfx{position:absolute;z-index:6}
+/* s06 */
+#s06 .pn{margin-top:24px;padding:0}
+#s06 .cap{background:#F3E9E2;border-radius:18px 18px 0 0;border-bottom:1px solid var(--line);height:64px;padding-top:9px;font-size:16px;line-height:1.55;text-align:center;letter-spacing:.05em}
+#s06 .cap small{display:block;font-size:10.5px;color:var(--wine);letter-spacing:.18em}
+#s06 .pg{position:relative;height:250px}
+#s06 .pim{position:absolute;left:24px;top:26px;width:340px;height:208px;background-size:contain;background-repeat:no-repeat;background-position:center;filter:drop-shadow(0 8px 14px rgba(40,25,20,.28))}
+#s06 .lg{display:grid;grid-template-columns:1fr 1fr;gap:12px 10px;padding:6px 16px 18px}
+#s06 .lg div{display:flex;gap:8px;align-items:flex-start}
+#s06 .lg b{flex:none;width:20px;height:20px;border-radius:50%;background:var(--wine);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-family:"Helvetica Neue",Arial,sans-serif;font-weight:500;margin-top:1px}
+#s06 .lg span{font-size:15px;line-height:1.35;letter-spacing:.04em}
+#s06 .lg small{display:block;font-size:12px;color:var(--text);margin-top:3px;letter-spacing:.03em}
+/* s09 index */
+#s09 .pn{margin-top:24px;padding:26px 16px 14px}
+#s09 .tt{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px double var(--ink);padding-bottom:9px}
+#s09 .tt .a{font-size:21px;letter-spacing:.06em}#s09 .tt .b{font-size:10px;color:var(--wine)}
+#s09 .row{display:grid;grid-template-columns:46px repeat(3,1fr);gap:0 6px;align-items:start;padding:12px 0 10px;border-bottom:1px dashed #D8CCBF}
+#s09 .row:last-child{border-bottom:none}
+#s09 .se{text-align:center;padding-top:14px}
+#s09 .se b{display:block;font-size:19px;line-height:1.15;color:var(--wine);letter-spacing:.02em}
+#s09 .se small{display:block;font-size:7.5px;margin-top:5px;color:var(--text);letter-spacing:.16em}
+#s09 .fl{text-align:center}
+#s09 .fl img{width:100%;display:block;filter:drop-shadow(0 3px 5px rgba(40,25,20,.25))}
+#s09 .fl .nm{font-size:11.5px;margin-top:6px;letter-spacing:0;white-space:nowrap}
+#s09 .fl .dt{font-size:8.5px;color:var(--rose);margin-top:3px;letter-spacing:.16em}
+#s09 .ft{display:flex;align-items:center;height:78px;border-top:3px double var(--ink);font-size:15px;color:var(--text);letter-spacing:.05em;padding-left:4px}
+#s09 .seal{position:absolute;right:-12px;bottom:-16px;width:108px;height:108px;z-index:5;transform:rotate(-10deg)}
+#s09 .seal .ring{width:108px;height:108px}
+/* s10 */
+#s10 .pn{margin-top:24px}
+#s10 .pic{height:260px}
+#s10 .chips{display:grid;grid-template-columns:repeat(5,1fr);margin-top:8px;border-top:1px solid var(--line)}
+#s10 .chips div{text-align:center;padding:11px 0 4px;font-size:13.5px;letter-spacing:.02em;border-left:1px dashed var(--line)}
+#s10 .chips div:first-child{border-left:none}
+#s10 .chips i{display:block;width:34px;height:18px;margin:0 auto 7px;border-radius:4px;box-shadow:inset 0 -5px 0 rgba(0,0,0,.12),0 0 0 1px rgba(58,38,33,.2)}
+/* s11 */
+#s11 .pn{margin-top:24px}
+#s11 .pic{height:300px}
+#s11 table{width:100%;border-collapse:collapse;margin-top:4px}
+#s11 td{padding:11px 8px;border-top:1px dashed #D8CCBF;font-size:14px;line-height:1.55;letter-spacing:.03em;vertical-align:top}
+#s11 td:first-child{width:62px;color:var(--wine)}
+#s11 tr:first-child td{border-top:none}
+/* s12 */
+#s12 .pic{height:457px}
+#s12 .say{left:14px;top:16px;font-size:20px}
+#s12 .end{position:absolute;right:14px;bottom:16px;z-index:4;background:var(--mocha);color:#FBF6EF;border-radius:10px;padding:7px 15px 9px;font-size:17px;transform:rotate(3deg);text-align:center;letter-spacing:.06em;box-shadow:0 4px 10px rgba(40,25,20,.22)}
+#s12 .end .en{font-size:9.5px;letter-spacing:.22em;display:block;color:var(--blush);margin-bottom:2px}
+</style></head><body><section id="s03"><div class="eb">誰適合語錄卡？</div>
+<h2>聖誕禮物 x 交換禮物<br><span class="u">讓一句話替你說出口</span></h2><div class="ring" style="width:124px;height:124px"><svg viewBox="0 0 100 100" width="124" height="124"><circle cx="50" cy="50" r="49" fill="none" stroke="#A07A70" stroke-width=".7" opacity=".35"/><circle cx="50" cy="50" r="45" fill="none" stroke="#A07A70" stroke-width=".9" opacity=".6"/><circle cx="50" cy="50" r="40.5" fill="#FBF3EC" stroke="#3A2621" stroke-width="1.1"/><circle cx="50" cy="50" r="35.5" fill="none" stroke="#7A2136" stroke-width=".55" stroke-dasharray="1.4 2.2"/></svg><div class="rt" style="transform:rotate(-6deg);font-size:19px"><div>抽一張<br>給自己</div></div></div><div class="pn" style="transform:rotate(-0.8deg)">
+<div class="tag"><small class="en">NO.01</small>需要一句話的人</div>
+<div class="pic" style="background-image:url(img/p1.jpg)">
+<div class="say dn" style="left:12px;top:16px" data-t="right:40px">滑了一整晚手機，<br>心還是靜不下來</div>
+<div class="card" style="left:10px;bottom:16px;transform:rotate(-5deg)"><img src="img/cards/13.png"></div>
+<div class="stk" style="background:#A07A70;right:18px;bottom:24px;transform:rotate(8deg)"><svg viewBox="0 0 40 40" width="30" height="30" fill="#fff"><path d="M26 7a14 14 0 1 0 7 25A12 12 0 0 1 26 7z"/><circle cx="31" cy="12" r="1.6"/><circle cx="34" cy="20" r="1.1"/></svg></div></div>
+<div class="nar">隨手<mark>抽一張</mark>，讓一句話<mark>剛好回答</mark>今天的你。</div></div><div class="pn" style="transform:rotate(0.8deg)">
+<div class="tag"><small class="en">NO.02</small>想留點空白給自己</div>
+<div class="pic" style="background-image:url(img/p2.jpg)">
+<div class="say dn" style="right:12px;top:16px" data-t="left:40px">睡前十分鐘，<br>只想留給自己</div>
+<div class="card" style="right:10px;bottom:16px;transform:rotate(5deg)"><img src="img/cards/46.png"></div>
+<div class="stk" style="background:#5C3F39;left:20px;bottom:30px;transform:rotate(-8deg)"><svg viewBox="0 0 40 40" width="30" height="30" fill="#fff"><path d="M20 5l4.3 9.2 10 1.1-7.5 6.8 2.1 9.9L20 27l-8.9 5 2.1-9.9-7.5-6.8 10-1.1z"/></svg></div></div>
+<div class="nar">一句中英語錄配一幅攝影，<mark>慢慢讀完</mark>再睡。</div></div><div class="pn" style="transform:rotate(-0.8deg)">
+<div class="tag"><small class="en">NO.03</small>交換禮物</div>
+<div class="pic" style="background-image:url(img/p3.jpg)">
+<div class="say up" style="left:12px;bottom:16px" data-t="right:44px">不知道送什麼，<br>又不想送得太普通</div>
+<div class="card" style="right:10px;top:18px;transform:rotate(5deg)"><img src="img/cards/39.png"></div>
+<div class="stk" style="background:#7A2136;left:22px;top:22px;transform:rotate(-10deg)"><svg viewBox="0 0 40 40" width="30" height="30" fill="#fff"><rect x="7" y="16" width="26" height="18" rx="2"/><rect x="5" y="11" width="30" height="7" rx="2"/><rect x="18" y="11" width="4" height="23" fill="#7A2136"/><path d="M20 11 C15 3 9 6 12 10 C14 12 18 11 20 11Z M20 11 C25 3 31 6 28 10 C26 12 22 11 20 11Z"/></svg></div></div>
+<div class="nar">五色收藏盒挑一個，打開就是 <mark>45 句溫柔</mark>。</div></div><div class="pn" style="transform:rotate(0.8deg)">
+<div class="tag"><small class="en">NO.04</small>聖誕禮物</div>
+<div class="pic" style="background-image:url(img/p4.jpg)">
+<div class="say up" style="left:10px;bottom:16px;font-size:17px" data-t="left:44px">卡片不知道寫什麼？<br>讓它替你說</div>
+<div class="card" style="right:8px;top:18px;transform:rotate(-4deg)"><img src="img/cards/30.png"></div>
+<div class="stk" style="background:#B5423A;left:22px;top:22px;transform:rotate(8deg)"><svg viewBox="0 0 40 40" width="30" height="30" fill="#fff"><path d="M20 33 C9 25 5 19 5 13.5 C5 9 8.5 6 12.5 6 C16 6 18.5 8 20 11 C21.5 8 24 6 27.5 6 C31.5 6 35 9 35 13.5 C35 19 31 25 20 33Z"/></svg></div></div>
+<div class="nar">在他需要一句話的時候，<mark>替你陪在身邊</mark>。</div></div></section><section id="s03b"><div class="xm"><div class="sh"></div><i class="sp" style="left:8%;top:18%;animation-delay:0s"></i><i class="sp" style="left:90%;top:22%;animation-delay:0.5s"></i><i class="sp" style="left:93%;top:74%;animation-delay:1.0s"></i><i class="sp" style="left:6%;top:78%;animation-delay:1.5s"></i><i class="sp" style="left:50%;top:8%;animation-delay:2.0s"></i><div class="en sm">CHRISTMAS DELIVERY</div><div class="big">聖誕節前到貨</div></div></section><section id="s04"><div><div class="n">45</div><div class="c">張中英雙語<br>語錄卡</div></div>
+<div><div class="n">45</div><div class="c">幅精選<br>攝影畫面</div></div>
+<div><div class="n">5<small>色</small></div><div class="c">收藏盒<br>挑一個顏色</div></div></section><section id="s05"><div class="eb">45 張，45 種心情</div>
+<h2>在需要一句話的時候，<br><span class="u">抽一張給自己</span></h2>
+<div class="lead">有寫給難過的你，也有寫給想往前走的你，<br>每一張都是今年重新挑選的。</div>
+<div style="position:relative"><div class="pn"><div class="wall"><img src="img/cards/19.png" style="left:-31px;top:-24px;transform:rotate(9.0deg)"><img src="img/cards/05.png" style="left:80px;top:-19px;transform:rotate(3.7deg)"><img src="img/cards/18.png" style="left:176px;top:-25px;transform:rotate(-3.8deg)"><img src="img/cards/16.png" style="left:277px;top:-19px;transform:rotate(-1.8deg)"><img src="img/cards/39.png" style="left:20px;top:41px;transform:rotate(8.2deg)"><img src="img/cards/32.png" style="left:124px;top:37px;transform:rotate(-5.2deg)"><img src="img/cards/48.png" style="left:229px;top:42px;transform:rotate(8.6deg)"><img src="img/cards/11.png" style="left:327px;top:38px;transform:rotate(2.3deg)"><img src="img/cards/09.png" style="left:-27px;top:104px;transform:rotate(-7.4deg)"><img src="img/cards/04.png" style="left:72px;top:111px;transform:rotate(4.6deg)"><img src="img/cards/35.png" style="left:173px;top:103px;transform:rotate(-7.2deg)"><img src="img/cards/14.png" style="left:277px;top:109px;transform:rotate(-5.8deg)"><img src="img/cards/25.png" style="left:17px;top:169px;transform:rotate(-5.6deg)"><img src="img/cards/22.png" style="left:123px;top:166px;transform:rotate(2.6deg)"><img src="img/cards/44.png" style="left:219px;top:169px;transform:rotate(-5.2deg)"><img src="img/cards/23.png" style="left:325px;top:175px;transform:rotate(5.5deg)"><img src="img/cards/08.png" style="left:-32px;top:238px;transform:rotate(-5.2deg)"><img src="img/cards/45.png" style="left:73px;top:238px;transform:rotate(2.6deg)"><img src="img/cards/28.png" style="left:173px;top:239px;transform:rotate(-5.2deg)"><img src="img/cards/02.png" style="left:279px;top:237px;transform:rotate(-3.1deg)"><img src="img/cards/42.png" style="left:14px;top:294px;transform:rotate(-7.4deg)"><img src="img/cards/17.png" style="left:121px;top:295px;transform:rotate(1.8deg)"><img src="img/cards/01.png" style="left:222px;top:298px;transform:rotate(8.3deg)"><img src="img/cards/27.png" style="left:328px;top:299px;transform:rotate(6.6deg)"><img src="img/cards/34.png" style="left:-34px;top:359px;transform:rotate(7.4deg)"><img src="img/cards/37.png" style="left:78px;top:359px;transform:rotate(-5.6deg)"><img src="img/cards/49.png" style="left:181px;top:366px;transform:rotate(-5.5deg)"><img src="img/cards/24.png" style="left:287px;top:366px;transform:rotate(1.9deg)"><img src="img/cards/21.png" style="left:15px;top:422px;transform:rotate(-8.3deg)"><img src="img/cards/15.png" style="left:126px;top:423px;transform:rotate(3.7deg)"><img src="img/cards/41.png" style="left:221px;top:429px;transform:rotate(1.7deg)"><img src="img/cards/26.png" style="left:326px;top:423px;transform:rotate(4.0deg)"></div></div><div class="ring" style="width:104px;height:104px"><svg viewBox="0 0 100 100" width="104" height="104"><circle cx="50" cy="50" r="49" fill="none" stroke="#A07A70" stroke-width=".7" opacity=".35"/><circle cx="50" cy="50" r="45" fill="none" stroke="#A07A70" stroke-width=".9" opacity=".6"/><circle cx="50" cy="50" r="40.5" fill="#FBF3EC" stroke="#3A2621" stroke-width="1.1"/><circle cx="50" cy="50" r="35.5" fill="none" stroke="#7A2136" stroke-width=".55" stroke-dasharray="1.4 2.2"/></svg><div class="rt" style="transform:rotate(8deg);font-size:17px"><div>45 張<br>不重複</div></div></div></div></section><section id="s05a" class="how"><div class="hd"><span class="no en">HOW TO USE 01</span>
+<h3>打開收藏盒，<br>隨手抽一張</h3><p class="d">不用挑，抽到哪一句，<br>就是今天要對你說的話。</p></div>
+<div class="pn"><div class="ph" data-clip="q_draw" style="background-image:url(gif/clips/q_draw/001.jpg)"></div>
+<div class="sfx" style="right:-12px;top:-28px"><div class="ring" style="width:84px;height:84px"><svg viewBox="0 0 100 100" width="84" height="84"><circle cx="50" cy="50" r="49" fill="none" stroke="#A07A70" stroke-width=".7" opacity=".35"/><circle cx="50" cy="50" r="45" fill="none" stroke="#A07A70" stroke-width=".9" opacity=".6"/><circle cx="50" cy="50" r="40.5" fill="#FBF3EC" stroke="#3A2621" stroke-width="1.1"/><circle cx="50" cy="50" r="35.5" fill="none" stroke="#7A2136" stroke-width=".55" stroke-dasharray="1.4 2.2"/></svg><div class="rt" style="transform:rotate(-8deg);font-size:21px"><div>抽！</div></div></div></div>
+<div class="bar"><span class="st en">STEP 01</span><span class="cn">抽一張</span><span class="ee en">DRAW</span></div></div></section><section id="s06"><div class="eb">一張卡片有什麼？</div>
+<h2>一句話，<br><span class="u">配一幅剛好的風景</span></h2>
+<div class="pn"><div class="cap" data-caps="q_cards"><small class="en">NO.06</small>生日不是為了慶祝你出生</div>
+<div class="pg"><div class="pim" data-clip="q_cards" style="background-image:url(gif/clips/q_cards/001.png)"></div></div>
+<div class="lg"><div><b>1</b><span>中文語錄<small>一句話，說進心裡</small></span></div><div><b>2</b><span>英文對照<small>同一句話，兩種語感</small></span></div><div><b>3</b><span>精選攝影<small>每張都是一幅風景</small></span></div><div><b>4</b><span>柔和圓角<small>拿在手上剛剛好</small></span></div></div></div></section><section id="s06a" class="how"><div class="hd"><span class="no en">HOW TO USE 02</span>
+<h3>讀完了，<br>把它立在盒子上</h3><p class="d">今天這一句，<br>一整天抬頭就看得到。</p></div>
+<div class="pn"><div class="ph" data-clip="q_stand" style="background-image:url(gif/clips/q_stand/001.jpg)"></div>
+<div class="sfx" style="left:-12px;top:-28px"><div class="ring" style="width:84px;height:84px"><svg viewBox="0 0 100 100" width="84" height="84"><circle cx="50" cy="50" r="49" fill="none" stroke="#A07A70" stroke-width=".7" opacity=".35"/><circle cx="50" cy="50" r="45" fill="none" stroke="#A07A70" stroke-width=".9" opacity=".6"/><circle cx="50" cy="50" r="40.5" fill="#FBF3EC" stroke="#3A2621" stroke-width="1.1"/><circle cx="50" cy="50" r="35.5" fill="none" stroke="#7A2136" stroke-width=".55" stroke-dasharray="1.4 2.2"/></svg><div class="rt" style="transform:rotate(6deg);font-size:16px"><div>今天<br>這一句</div></div></div></div>
+<div class="bar"><span class="st en">STEP 02</span><span class="cn">立在盒上</span><span class="ee en">STAND</span></div></div></section><section id="s07" class="how"><div class="hd"><span class="no en">HOW TO USE 03</span>
+<h3>手機碰一下收藏盒，<br>打開專屬內容頁</h3><p class="d">每張卡都有一段延伸解讀，<br>iPhone 與 Android 都能感應。</p></div>
+<div class="pn"><div class="ph" data-clip="q_nfc" style="background-image:url(gif/clips/q_nfc/001.jpg)"></div>
+<div class="sfx" style="right:-12px;top:-28px"><div class="ring" style="width:84px;height:84px"><svg viewBox="0 0 100 100" width="84" height="84"><circle cx="50" cy="50" r="49" fill="none" stroke="#A07A70" stroke-width=".7" opacity=".35"/><circle cx="50" cy="50" r="45" fill="none" stroke="#A07A70" stroke-width=".9" opacity=".6"/><circle cx="50" cy="50" r="40.5" fill="#FBF3EC" stroke="#3A2621" stroke-width="1.1"/><circle cx="50" cy="50" r="35.5" fill="none" stroke="#7A2136" stroke-width=".55" stroke-dasharray="1.4 2.2"/></svg><div class="rt" style="transform:rotate(-6deg);font-size:21px"><div>嗶～</div></div></div></div>
+<div class="bar"><span class="st en">STEP 03</span><span class="cn">碰一下</span><span class="ee en">NFC</span></div></div></section><section id="s08" class="how"><div class="hd"><span class="no en">HOW TO USE 04</span>
+<h3>一張一張翻，<br>挑一句送給他</h3><p class="d">抽到特別有感的那張，<br>就送給剛好需要它的人。</p></div>
+<div class="pn"><div class="ph" data-clip="q_flip" style="background-image:url(gif/clips/q_flip/001.jpg)"></div>
+<div class="sfx" style="left:-12px;top:-28px"><div class="ring" style="width:84px;height:84px"><svg viewBox="0 0 100 100" width="84" height="84"><circle cx="50" cy="50" r="49" fill="none" stroke="#A07A70" stroke-width=".7" opacity=".35"/><circle cx="50" cy="50" r="45" fill="none" stroke="#A07A70" stroke-width=".9" opacity=".6"/><circle cx="50" cy="50" r="40.5" fill="#FBF3EC" stroke="#3A2621" stroke-width="1.1"/><circle cx="50" cy="50" r="35.5" fill="none" stroke="#7A2136" stroke-width=".55" stroke-dasharray="1.4 2.2"/></svg><div class="rt" style="transform:rotate(6deg);font-size:20px"><div>送你</div></div></div></div>
+<div class="bar"><span class="st en">STEP 04</span><span class="cn">送一句</span><span class="ee en">SHARE</span></div></div></section><section id="s09" style="padding-bottom:46px"><div class="eb">看見・停下・前行・呼吸</div>
+<h2>今天的你，<br><span class="u">需要哪一句？</span></h2>
+<div class="pn"><div class="tt"><span class="a">語錄卡 2027</span><span class="b en">DAILY QUOTE CARDS</span></div>
+<div class="row"><div class="se"><b>看見</b><small class="en">SEE</small></div><div class="fl"><img src="img/cards/06.png"><div class="nm">而是慶祝你存在</div><div class="dt en">NO.06</div></div><div class="fl"><img src="img/cards/30.png"><div class="nm">你被安穩的愛著呢</div><div class="dt en">NO.30</div></div><div class="fl"><img src="img/cards/39.png"><div class="nm">你送出去的每顆糖</div><div class="dt en">NO.39</div></div></div><div class="row"><div class="se"><b>停下</b><small class="en">PAUSE</small></div><div class="fl"><img src="img/cards/08.png"><div class="nm">允許自己出錯</div><div class="dt en">NO.08</div></div><div class="fl"><img src="img/cards/29.png"><div class="nm">我知道你最近很累</div><div class="dt en">NO.29</div></div><div class="fl"><img src="img/cards/13.png"><div class="nm">焦慮不是惡魔</div><div class="dt en">NO.13</div></div></div><div class="row"><div class="se"><b>前行</b><small class="en">MOVE</small></div><div class="fl"><img src="img/cards/16.png"><div class="nm">船停在港口最安全</div><div class="dt en">NO.16</div></div><div class="fl"><img src="img/cards/23.png"><div class="nm">別等一切完美</div><div class="dt en">NO.23</div></div><div class="fl"><img src="img/cards/11.png"><div class="nm">自己寫的劇本</div><div class="dt en">NO.11</div></div></div><div class="row"><div class="se"><b>呼吸</b><small class="en">BREATHE</small></div><div class="fl"><img src="img/cards/37.png"><div class="nm">慢慢走吧</div><div class="dt en">NO.37</div></div><div class="fl"><img src="img/cards/46.png"><div class="nm">凡是自然的東西</div><div class="dt en">NO.46</div></div><div class="fl"><img src="img/cards/22.png"><div class="nm">我願對自己溫柔</div><div class="dt en">NO.22</div></div></div><div class="ft">還有 33 張，等你慢慢抽</div><div class="seal"><div class="ring" style="width:108px;height:108px"><svg viewBox="0 0 100 100" width="108" height="108"><circle cx="50" cy="50" r="49" fill="none" stroke="#A07A70" stroke-width=".7" opacity=".35"/><circle cx="50" cy="50" r="45" fill="none" stroke="#A07A70" stroke-width=".9" opacity=".6"/><circle cx="50" cy="50" r="40.5" fill="#FBF3EC" stroke="#3A2621" stroke-width="1.1"/><circle cx="50" cy="50" r="35.5" fill="none" stroke="#7A2136" stroke-width=".55" stroke-dasharray="1.4 2.2"/></svg><div class="rt" style="transform:rotate(-8deg);font-size:18px"><div><span class="en" style="font-size:7.5px;letter-spacing:.2em;display:block;color:#7A2136;margin-bottom:3px">NEW 2027</span>全新<br>收錄</div></div></div></div></div></section><section id="s10"><div class="eb">收藏盒顏色</div>
+<h2>五種顏色，<br><span class="u">選一個收進你的日常</span></h2>
+<div class="pn"><div class="pic" style="background-image:url(img/s10.jpg)"></div>
+<div class="chips"><div><i style="background:#9DB4C8"></i>晴日雲藍</div><div><i style="background:#B3A1C6"></i>晚風藤紫</div><div><i style="background:#B8A891"></i>暖霧茶棕</div><div><i style="background:#2F2B2A"></i>靜夜墨黑</div><div><i style="background:#7E2F42"></i>暮色莓紅</div></div></div></section><section id="s11"><div class="eb">規格</div>
+<h2>一盒 45 張，<br><span class="u">放在手邊剛剛好</span></h2>
+<div class="pn"><div class="pic" style="background-image:url(img/s11.jpg)"></div><table><tr><td>尺寸</td><td>卡片 9 × 5.4 公分，柔和圓角</td></tr><tr><td>內容</td><td>45 張，每張一句中英雙語語錄，<br>配一幅精選攝影</td></tr><tr><td>收藏盒</td><td>五色可選，可以直接從盒中抽卡</td></tr><tr><td>NFC</td><td>手機感應收藏盒，打開專屬內容頁，<br>iPhone 與 Android 都能用</td></tr><tr><td>重量</td><td>158 g（含外盒 250 g，<br>外盒 8.1 × 12.6 × 6.1 公分）</td></tr></table></div></section><section id="s12" style="padding-bottom:48px"><div class="pn"><div class="pic" style="background-image:url(img/s12.jpg)">
+<div class="say dn" data-t="left:34px">需要的時候，<br>它一直都在</div>
+<div class="end"><span class="en">SEE YOU TOMORROW</span>明天，再抽一張</div></div></div></section><script>document.querySelectorAll('.say[data-t]').forEach((e,i)=>{const c='t'+i;e.classList.add(c);const s=document.createElement('style');s.textContent=`.${c}:after{${e.dataset.t}}`;document.head.appendChild(s)})</script></body></html>
