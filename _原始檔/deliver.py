@@ -3,7 +3,7 @@ import os, shutil, base64, io
 from PIL import Image
 D = os.path.dirname(os.path.abspath(__file__))
 B = "/Users/ningchang/Library/Mobile Documents/com~apple~CloudDocs/○煦暖曆/04_內容企劃/_多產品/落地頁改版設計_1122/"
-V = 'v5'; BASE = f'11.25_語錄卡_落地頁改版_{V}'; NAME = BASE + '_照幹話曆結構_圓角卡片收藏盒'
+V = 'v6'; BASE = f'11.25_語錄卡_落地頁改版_{V}'; NAME = BASE + '_卡片統一只用1到45號'
 O = B + NAME
 SEC = [('s03', '03_誰適合語錄卡', 0), ('s03b', '03b_聖誕節前到貨_金光_GIF', 1), ('s04', '04_數字列', 0),
        ('s05', '05_45張語錄卡牆', 0), ('s05a', '05a_打開收藏盒抽一張_GIF', 1), ('s06', '06_一張卡拆解_8張輪播_GIF', 1),

@@ -14,7 +14,7 @@ def card(n, w=600):
 os.makedirs(D + '/img/cards', exist_ok=True)
 for n in range(1, 51): card(n).save(f'{D}/img/cards/{n:02d}.png')
 # 06 輪播
-DAYS = [6, 30, 16, 37, 39, 8, 23, 46]
+DAYS = [6, 30, 16, 37, 39, 8, 23, 41]  # 只用 1–45 號（一盒 45 張）
 od = D + '/gif/clips/q_cards'; shutil.rmtree(od, ignore_errors=True); os.makedirs(od)
 caps = []; k = 0
 for n in DAYS:

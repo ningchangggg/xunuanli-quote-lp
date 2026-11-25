@@ -14,7 +14,7 @@ BOX = [('晴日雲藍', '#9DB4C8'), ('晚風藤紫', '#B3A1C6'), ('暖霧茶棕'
 P = [
     dict(n='01', who='需要一句話的人', h='滑了一整晚手機，<br>心還是靜不下來', img='p1', card=13,
          s='隨手<mark>抽一張</mark>，讓一句話<mark>剛好回答</mark>今天的你。'),
-    dict(n='02', who='想留點空白給自己', h='睡前十分鐘，<br>只想留給自己', img='p2', card=46,
+    dict(n='02', who='想留點空白給自己', h='睡前十分鐘，<br>只想留給自己', img='p2', card=41,
          s='一句中英語錄配一幅攝影，<mark>慢慢讀完</mark>再睡。'),
     dict(n='03', who='交換禮物', h='不知道送什麼，<br>又不想送得太普通', img='p3', card=39,
          s='五色收藏盒挑一個，打開就是 <mark>45 句溫柔</mark>。'),
@@ -194,7 +194,7 @@ def s04():
 
 def s05():
     random.seed(11)
-    order = [n for n in range(1, 51)]; random.shuffle(order)
+    order = [n for n in range(1, 46)]; random.shuffle(order)  # 一盒 45 張：只用 1–45 號
     imgs = ''; k = 0
     for r in range(8):
         for c in range(4):
@@ -229,7 +229,7 @@ def s09():
     rows = [('看見', 'SEE', [(6, '而是慶祝你存在'), (30, '你被安穩的愛著呢'), (39, '你送出去的每顆糖')]),
             ('停下', 'PAUSE', [(8, '允許自己出錯'), (29, '我知道你最近很累'), (13, '焦慮不是惡魔')]),
             ('前行', 'MOVE', [(16, '船停在港口最安全'), (23, '別等一切完美'), (11, '自己寫的劇本')]),
-            ('呼吸', 'BREATHE', [(37, '慢慢走吧'), (46, '凡是自然的東西'), (22, '我願對自己溫柔')])]
+            ('呼吸', 'BREATHE', [(37, '慢慢走吧'), (41, '好好睡一覺'), (22, '我願對自己溫柔')])]
     body = ''
     for se, en, cards in rows:
         body += f'<div class="row"><div class="se"><b>{se}</b><small class="en">{en}</small></div>'
